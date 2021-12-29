@@ -51,7 +51,7 @@ const machine = createMachine({
     },
     open: {
       on: {
-        CLOSE: "close",
+        CLOSE: "closed",
       },
     },
   },
@@ -100,7 +100,7 @@ const machine = createMachine({
     },
     open: {
       on: {
-        CLOSE: "close",
+        CLOSE: "closed",
         CHANGE_NAME: {
           actions: assign((context, event) => {
             return {
